@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    
+
     <h1>Calculator</h1>
 
 
@@ -16,47 +18,48 @@
     <div class="card">
 
         <div class="calc-head">
-            <input type="text" id="result" maxlength="11">
+            <input type="text" name="screen" id="result" maxlength="11" disabled>
         </div>
 
-    <div class="calc-body">
-        <div>
-            <input type="button" class="btn" value="C">
-            <input type="button" class="btn" value="+/-">
-            <input type="button" class="btn" value="%">
-            <input type="button" class="btn btn-style1" value="/">
-        </div>
+        <div class="calc-body">
+            <div>
+                <input type="button" class="btn" value="C" onclick="result.value = ''">
+                <input type="button" class="btn" value="&radic;" onclick="result.value = Math.sqrt(result.value)">
+                <input type="button" class="btn" value="%">
+                <input type="button" class="btn btn-style1" value="/" onclick="result.value += '/' ">
+            </div>
 
-        <div>
-            <input type="button" class="btn" value="7">
-            <input type="button" class="btn" value="8">
-            <input type="button" class="btn" value="9">
-            <input type="button" class="btn btn-style1" value="x">
-        </div>
+            <div>
+                <input type="button" class="btn" value="7" onclick="result.value += '7' ">
+                <input type="button" class="btn" value="8" onclick="result.value += '8' ">
+                <input type="button" class="btn" value="9" onclick="result.value += '9' ">
+                <input type="button" class="btn btn-style1" value="x" onclick="result.value += '*' ">
+            </div>
 
-        <div>
-            <input type="button" class="btn" value="4">
-            <input type="button" class="btn" value="5">
-            <input type="button" class="btn" value="6">
-            <input type="button" class="btn btn-style1" value="-">
-        </div>
+            <div>
+                <input type="button" class="btn" value="4" onclick="result.value += '4' ">
+                <input type="button" class="btn" value="5" onclick="result.value += '5' ">
+                <input type="button" class="btn" value="6" onclick="result.value += '6' ">
+                <input type="button" class="btn btn-style1" value="-" onclick="result.value += '-' ">
+            </div>
 
-        <div>
-            <input type="button" class="btn" value="1">
-            <input type="button" class="btn" value="2">
-            <input type="button" class="btn" value="3">
-            <input type="button" class="btn btn-style1" value="+">
-        </div>
+            <div>
+                <input type="button" class="btn" value="1" onclick="result.value += '1' ">
+                <input type="button" class="btn" value="2" onclick="result.value += '2' ">
+                <input type="button" class="btn" value="3" onclick="result.value += '3' ">
+                <input type="button" class="btn btn-style1" value="+" onclick="result.value += '+' ">
+            </div>
 
-        <div>
-            <input type="button" class="btn" value="0">
-            <input type="button" class="btn" value=".">
-            <input type="button" class="btn" value="DEL">
-            <input type="button" class="btn btn-style2" value="=">
+            <div>
+                <input type="button" class="btn" value="0" onclick="result.value += '0' ">
+                <input type="button" class="btn" value="." onclick="result.value += '.' ">
+                <input type="button" class="btn" value="DEL" onclick="result.value = result.value.slice(0, -1)">
+                <input type="button" class="btn btn-style2" value="=" onclick="result.value = eval(result.value)">
+            </div>
         </div>
     </div>
-</div>
 
 
 </body>
+
 </html>
